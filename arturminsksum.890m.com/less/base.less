@@ -1,0 +1,405 @@
+.container {
+	max-width: 1140px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 1rem;
+}
+
+.btn {
+	color: #fff;
+	background-color: #337ab7;
+	border-color: #2e6da4;
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	line-height: 1.4;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 1px solid transparent;
+	border-radius: 0.4rem;
+}
+
+body {
+	margin: 0;
+
+	header {
+		.inner-wrapper {
+			// Логотип
+			h1 {
+				text-indent: -9999px;
+				float: left;
+				margin: 0;
+
+				.logo {
+				float: left;
+				width: 150px;
+				height: 90px;
+				margin: 0.5rem 0.5rem;
+				background: url(../images/100.png) no-repeat;
+				}
+			}
+			// Контакты
+			.contacts {
+				float: right;
+				margin: 0.5rem;
+				@media screen and (max-width: 430px) {
+					display: none;
+				}
+	
+				ul {
+					list-style: none;
+					margin: 0;
+					padding: 0;
+
+					li {
+						margin-top: 0.3rem;
+
+						a {
+							text-decoration: none;
+							color: #337ab7;
+						}
+
+						.mobile {
+							display: inline-block;
+							vertical-align: middle;
+							width: 16px;
+						    height: 16px;
+						    margin-right: 5px;
+						    vertical-align: middle;
+						    background-image: url('../images/mob-icon.png');
+						    background-repeat: no-repeat;
+						}
+
+						.mobile-mts {
+						    background-position: 0 0;
+						}
+
+						.mobile-life {
+						    background-position: -32px 0px;
+						}	
+					}
+				}
+			}
+		}
+		
+		// Меню
+		nav {
+			background-color: #dff0d8;
+			clear: both;
+			position: relative;
+			@media screen and (max-width: 540px) {
+				height: 2.75rem;
+				ul {
+					display: none;
+				}
+			}
+			
+			ul {
+
+
+
+					list-style: none;
+					margin: 0;
+					padding: 0;
+
+				li {
+					display: inline-block;
+					padding: 1rem;
+
+					a {
+						color: #3c763d;
+						text-decoration: none;
+					}
+
+					.selected {
+						color: #000000;
+					}
+
+					a:hover {
+						text-decoration: underline;
+						color: #666;
+					}
+				}
+			}
+			
+			// Скрытое меню
+			.btn-menu, .hidden-menu {
+				visibility: hidden;
+			}
+
+			.hidden-menu {
+				display: block;
+				position: fixed;
+				list-style:none;
+				padding: 10px;
+				margin: 0;
+				box-sizing: border-box;
+				width: 10rem;
+				background-color: #eee;
+				height: 100%;
+				top: 0;
+				left: -200px;
+				transition: left .2s;
+				z-index: 6;
+				-webkit-transform: translateZ(0);
+				-webkit-backface-visibility: hidden;
+				@media screen and (max-width: 540px) {
+				visibility: visible;
+			}
+
+			}
+
+			.hidden-menu-ticker {
+				display: none;
+			}
+
+			.btn-menu {
+				color: #fff;
+				background-color: #337ab7;
+				padding: 0.3rem;
+				position: absolute;
+				top: 0.3rem;
+				left: 0.3rem;
+				cursor: pointer;
+				transition: left .23s;
+				z-index: 7;
+				width: 25px;
+				-webkit-transform: translateZ(0);
+				-webkit-backface-visibility: hidden;
+				
+				@media screen and (max-width: 540px) {
+					visibility: visible;
+				}
+			}
+
+			.btn-menu span {
+				display: block;
+				height: 0.3125rem;
+				background-color: #fff;
+				margin: 0.3125rem 0 0;
+				transition: all .1s linear .23s;
+				position: relative;
+			}
+			
+			.btn-menu span.first {
+				margin-top: 0;
+			}
+			
+			.hidden-menu-ticker:checked ~ .btn-menu {
+				left: 8rem;
+			}
+			
+			.hidden-menu-ticker:checked ~ .hidden-menu {
+				left: 0;
+			}
+			
+			.hidden-menu-ticker:checked ~ .btn-menu span.first {
+				-webkit-transform: rotate(45deg);
+				top: 0.6rem;
+			}
+			
+			.hidden-menu-ticker:checked ~ .btn-menu span.second {
+				opacity: 0;
+			}
+			
+			.hidden-menu-ticker:checked ~ .btn-menu span.third {
+				-webkit-transform: rotate(-45deg);
+				top: -0.6rem;
+			}
+		}
+	}
+
+	main {
+		// Слайдер
+		.slider {
+			max-width: 850px;
+			margin-left: auto;
+			margin-right: auto;
+
+			h2 {
+				margin: 0;
+				text-align: center;
+				padding: 1rem 0;
+			}
+
+			.bxslider {
+				list-style: none;
+				margin: 0;
+			}
+			
+		}
+		// Тектовый блок
+		.text-block {
+			// Вкладки
+			.panels {
+
+				.tabs {
+
+					.tab {
+						display: inline-block;
+					    background-color: #dff0d8;
+					    border: 1px solid #ddd;
+					    border-bottom-width: 0;
+  						padding: 10px 15px;
+  						border-radius: 3px 3px 0 0;
+  						color: #3c763d;
+					}
+
+					.active {
+					    color: #000000;
+					}
+				}
+
+				.tab_content {
+
+					.tab_item {
+					    display: none;
+					    border: 1px solid #ddd;
+  						padding: 10px 15px;
+  						border-radius: 0px 3px 3px 3px;
+  						background-color: #f5f5f5;
+
+  						.theme {
+							margin: 0;
+							padding: 0;
+
+							li {
+								display: inline-block;
+								padding: 0.5rem;
+							}
+  						}
+					}
+
+					.tab_item:first-child {
+					    display: block;
+					}
+				}
+
+			}
+			// Акордеон
+			.accordion {
+
+			    dt, dd {
+			        padding: 0.7rem;
+			        border: 1px solid #000000;
+			        border-bottom: 0; 
+			        border: 1px solid #ddd;
+
+			    	a {
+				        display: block;
+				        color: #000000;
+				        text-decoration: none;
+			        }
+			    }
+
+				dt {
+					background-color: #dff0d8;
+				}
+
+			  	dd {
+				    border-top: 0; 
+				}
+			}
+
+		}
+		
+		// Модальное окно
+		.price {
+			display: inline-block;
+			margin: 0 1rem;
+			z-index: 10;
+		}
+		// Формы
+		form {
+			padding: 1rem;
+			background-color: #f5f5f5;
+
+			label, span {
+				display: inline-block;
+				padding-top: 1rem;
+				max-width: 100%;
+				margin-bottom: 5px;
+				font-weight: bold;
+			}
+
+			.nameInput, .emailInput, select, textarea {
+				display: block;
+				padding: 6px 12px;
+				color: #555;
+				background-color: #fff;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+			}
+
+			label[for="themes"] {
+				display: block;
+			}
+
+			textarea {
+				width: 70%;
+			}
+
+			.copy,
+			label[for="nameInput"] {
+				padding-top: 0;
+			}
+		}
+		// Блок новостей
+		.news {
+
+			.item-news {
+				float: left;
+				box-sizing: border-box;
+				width: 25%;
+				padding: 1%;
+				vertical-align: top;
+				word-wrap: break-word;
+				border-left: 5px solid #eee;
+
+				@media screen and (max-width: 768px) {
+					width: 50%;
+				}
+
+				@media screen and (max-width: 480px) {
+					width: 100%;
+				}
+
+				time {
+					font-size: 80%;
+					color: #777;
+				}
+
+				p {
+					margin: 0.5rem 0;
+
+					a {
+						color: #337ab7;
+						text-decoration: none;
+					}
+					
+					a:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+
+			.last {
+				margin-right: 0%;
+			}
+
+		}	
+
+	}
+
+	footer {
+		clear: both;
+		background-color: #dff0d8;
+		
+		p {
+			text-align: center;
+			padding: 1rem;
+		}
+	}
+}
+
+

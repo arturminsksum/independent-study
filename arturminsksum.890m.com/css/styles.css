@@ -1,0 +1,328 @@
+.container {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+.btn {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  line-height: 1.4;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 0.4rem;
+}
+body {
+  margin: 0;
+}
+body header .inner-wrapper h1 {
+  text-indent: -9999px;
+  float: left;
+  margin: 0;
+}
+body header .inner-wrapper h1 .logo {
+  float: left;
+  width: 150px;
+  height: 90px;
+  margin: 0.5rem 0.5rem;
+  background: url(../images/100.png) no-repeat;
+}
+body header .inner-wrapper .contacts {
+  float: right;
+  margin: 0.5rem;
+}
+@media screen and (max-width: 430px) {
+  body header .inner-wrapper .contacts {
+    display: none;
+  }
+}
+body header .inner-wrapper .contacts ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body header .inner-wrapper .contacts ul li {
+  margin-top: 0.3rem;
+}
+body header .inner-wrapper .contacts ul li a {
+  text-decoration: none;
+  color: #337ab7;
+}
+body header .inner-wrapper .contacts ul li .mobile {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  vertical-align: middle;
+  background-image: url('../images/mob-icon.png');
+  background-repeat: no-repeat;
+}
+body header .inner-wrapper .contacts ul li .mobile-mts {
+  background-position: 0 0;
+}
+body header .inner-wrapper .contacts ul li .mobile-life {
+  background-position: -32px 0px;
+}
+body header nav {
+  background-color: #dff0d8;
+  clear: both;
+  position: relative;
+}
+@media screen and (max-width: 540px) {
+  body header nav {
+    height: 2.75rem;
+  }
+  body header nav ul {
+    display: none;
+  }
+}
+body header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body header nav ul li {
+  display: inline-block;
+  padding: 1rem;
+}
+body header nav ul li a {
+  color: #3c763d;
+  text-decoration: none;
+}
+body header nav ul li .selected {
+  color: #000000;
+}
+body header nav ul li a:hover {
+  text-decoration: underline;
+  color: #666;
+}
+body header nav .btn-menu,
+body header nav .hidden-menu {
+  visibility: hidden;
+}
+body header nav .hidden-menu {
+  display: block;
+  position: fixed;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  box-sizing: border-box;
+  width: 10rem;
+  background-color: #eee;
+  height: 100%;
+  top: 0;
+  left: -200px;
+  -webkit-transition: left .2s;
+          transition: left .2s;
+  z-index: 6;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+}
+@media screen and (max-width: 540px) {
+  body header nav .hidden-menu {
+    visibility: visible;
+  }
+}
+body header nav .hidden-menu-ticker {
+  display: none;
+}
+body header nav .btn-menu {
+  color: #fff;
+  background-color: #337ab7;
+  padding: 0.3rem;
+  position: absolute;
+  top: 0.3rem;
+  left: 0.3rem;
+  cursor: pointer;
+  -webkit-transition: left .23s;
+          transition: left .23s;
+  z-index: 7;
+  width: 25px;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+}
+@media screen and (max-width: 540px) {
+  body header nav .btn-menu {
+    visibility: visible;
+  }
+}
+body header nav .btn-menu span {
+  display: block;
+  height: 0.3125rem;
+  background-color: #fff;
+  margin: 0.3125rem 0 0;
+  -webkit-transition: all .1s linear .23s;
+          transition: all .1s linear .23s;
+  position: relative;
+}
+body header nav .btn-menu span.first {
+  margin-top: 0;
+}
+body header nav .hidden-menu-ticker:checked ~ .btn-menu {
+  left: 8rem;
+}
+body header nav .hidden-menu-ticker:checked ~ .hidden-menu {
+  left: 0;
+}
+body header nav .hidden-menu-ticker:checked ~ .btn-menu span.first {
+  -webkit-transform: rotate(45deg);
+  top: 0.6rem;
+}
+body header nav .hidden-menu-ticker:checked ~ .btn-menu span.second {
+  opacity: 0;
+}
+body header nav .hidden-menu-ticker:checked ~ .btn-menu span.third {
+  -webkit-transform: rotate(-45deg);
+  top: -0.6rem;
+}
+body main .slider {
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+body main .slider h2 {
+  margin: 0;
+  text-align: center;
+  padding: 1rem 0;
+}
+body main .slider .bxslider {
+  list-style: none;
+  margin: 0;
+}
+body main .text-block .panels .tabs .tab {
+  display: inline-block;
+  background-color: #dff0d8;
+  border: 1px solid #ddd;
+  border-bottom-width: 0;
+  padding: 10px 15px;
+  border-radius: 3px 3px 0 0;
+  color: #3c763d;
+}
+body main .text-block .panels .tabs .active {
+  color: #000000;
+}
+body main .text-block .panels .tab_content .tab_item {
+  display: none;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  border-radius: 0px 3px 3px 3px;
+  background-color: #f5f5f5;
+}
+body main .text-block .panels .tab_content .tab_item .theme {
+  margin: 0;
+  padding: 0;
+}
+body main .text-block .panels .tab_content .tab_item .theme li {
+  display: inline-block;
+  padding: 0.5rem;
+}
+body main .text-block .panels .tab_content .tab_item:first-child {
+  display: block;
+}
+body main .text-block .accordion dt,
+body main .text-block .accordion dd {
+  padding: 0.7rem;
+  border: 1px solid #000000;
+  border-bottom: 0;
+  border: 1px solid #ddd;
+}
+body main .text-block .accordion dt a,
+body main .text-block .accordion dd a {
+  display: block;
+  color: #000000;
+  text-decoration: none;
+}
+body main .text-block .accordion dt {
+  background-color: #dff0d8;
+}
+body main .text-block .accordion dd {
+  border-top: 0;
+}
+body main .price {
+  display: inline-block;
+  margin: 0 1rem;
+  z-index: 10;
+}
+body main form {
+  padding: 1rem;
+  background-color: #f5f5f5;
+}
+body main form label,
+body main form span {
+  display: inline-block;
+  padding-top: 1rem;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+body main form .nameInput,
+body main form .emailInput,
+body main form select,
+body main form textarea {
+  display: block;
+  padding: 6px 12px;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+body main form label[for="themes"] {
+  display: block;
+}
+body main form textarea {
+  width: 70%;
+}
+body main form .copy,
+body main form label[for="nameInput"] {
+  padding-top: 0;
+}
+body main .news .item-news {
+  float: left;
+  box-sizing: border-box;
+  width: 25%;
+  padding: 1%;
+  vertical-align: top;
+  word-wrap: break-word;
+  border-left: 5px solid #eee;
+}
+@media screen and (max-width: 768px) {
+  body main .news .item-news {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  body main .news .item-news {
+    width: 100%;
+  }
+}
+body main .news .item-news time {
+  font-size: 80%;
+  color: #777;
+}
+body main .news .item-news p {
+  margin: 0.5rem 0;
+}
+body main .news .item-news p a {
+  color: #337ab7;
+  text-decoration: none;
+}
+body main .news .item-news p a:hover {
+  text-decoration: underline;
+}
+body main .news .last {
+  margin-right: 0%;
+}
+body footer {
+  clear: both;
+  background-color: #dff0d8;
+}
+body footer p {
+  text-align: center;
+  padding: 1rem;
+}
+/*# sourceMappingURL=styles.css.map */
